@@ -1,1 +1,2 @@
-Hello, this is the repository (Roxan Romero)
+Hello, this is the repository (Roxan Romero).
+Completed, my first commit and push
