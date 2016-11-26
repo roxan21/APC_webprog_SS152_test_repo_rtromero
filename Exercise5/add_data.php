@@ -6,13 +6,13 @@ if(isset($_POST['btn-save']))
  // variables for input data
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
+ $nickname = $_POST['nickname'];
  // variables for input data
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
- mysql_query($sql_query);
+        $sql_query = "INSERT INTO users(first_name,last_name,user_nickname) VALUES('$first_name','$last_name','$nickname')";
+ $con=mysqli_query($con,$sql_query);
         
         // sql query for inserting data into database
  
@@ -46,7 +46,7 @@ if(isset($_POST['btn-save']))
     <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="city_name" placeholder="City" required /></td>
+    <td><input type="text" name="nickname" placeholder="Nickname" required /></td>
     </tr>
     <tr>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
