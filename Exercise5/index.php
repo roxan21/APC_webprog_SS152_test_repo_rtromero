@@ -47,7 +47,7 @@ function delete_id(id)
  <div id="content">
     <table align="center">
     <tr>
-    <th colspan="5"><a href="add_data.php">add data here.</a></th>
+    <th colspan="5"><a href="Home.php">add data here.</a></th>
     </tr>
     <th>First Name</th>
     <th>Last Name</th>
