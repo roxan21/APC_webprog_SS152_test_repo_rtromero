@@ -12,6 +12,10 @@ if(isset($_POST['btn-update']))
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
  $nickname = $_POST['nickname'];
+ $user_city = $_POST['user_city'];
+ $gender = $_POST['gender'];
+ $cp_num = $_POST['cp_num'];
+ $comments = $_POST['comments'];
  // variables for input data
 
  // sql query for update data into database
@@ -70,7 +74,19 @@ if(isset($_POST['btn-cancel']))
     <td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_nickname']; ?>" required /></td>
+    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $fetched_row['user_nickname']; ?>" required /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="user_city" placeholder="Address" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="gender" placeholder="Gender" value="<?php echo $fetched_row['gender']; ?>" required /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="cp_num" placeholder="CP Number" value="<?php echo $fetched_row['cp_num']; ?>" required /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="comments" placeholder="Comments" value="<?php echo $fetched_row['comments']; ?>" required /></td>
     </tr>
     <tr>
     <td>
