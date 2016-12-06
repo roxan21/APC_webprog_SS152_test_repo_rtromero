@@ -41,7 +41,7 @@ if(isset($_POST['btn-save']))
     <form method="post">
     <table align="center">
     <tr>
-    <td align="center"><a href="Home.php">back to main page</a></td>
+    <td align="center"><a href="Exer5.php">back to main page</a></td>
     </tr>
     <tr>
     <td><input type="text" name="first_name" placeholder="First Name" required /></td>
