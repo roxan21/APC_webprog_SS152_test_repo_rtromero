@@ -141,7 +141,7 @@ function test_input($data) {
 </form>
 
 <?php
-/*echo "<h2>Your Input:</h2>";
+echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";
 echo $nickname;
@@ -154,7 +154,7 @@ echo $gender;
 echo $phone;
 echo "<br>";
 echo $comment;
-echo "<br>";*/
+echo "<br>";
 ?>
 <center>
 
