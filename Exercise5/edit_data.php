@@ -28,7 +28,7 @@ if(isset($_POST['btn-update']))
   ?>
   <script type="text/javascript">
   alert('Data Are Updated Successfully');
-  window.location.href='Home.php';
+  window.location.href='Exer5.php';
   </script>
   <?php
  }
