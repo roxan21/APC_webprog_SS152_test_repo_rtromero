@@ -1,4 +1,27 @@
 <!DOCTYPE html>
+<?php
+include_once 'dbconfig.php';
+if(isset($_POST['btn-save']))
+{
+ // variables for input data
+ $first_name = $_POST['first_name'];
+ $last_name = $_POST['last_name'];
+ $nickname = $_POST['nickname'];
+ $user_city = $_POST['user_city'];
+ $gender = $_POST['gender'];
+ $cp_num = $_POST['cp_num'];
+ $comments = $_POST['comments'];
+ // variables for input data
+ 
+ // sql query for inserting data into database
+ 
+        $sql_query = "INSERT INTO users(first_name,last_name,nickname,user_city,gender,cp_num,comments) VALUES('$first_name','$last_name','$nickname','$user_city','$gender','$cp_num','$comments')";
+ $con=mysqli_query($con,$sql_query);
+        
+        // sql query for inserting data into database
+ 
+}
+?>
 <html>
 <title>Roxan Romero</title>
 <body>
@@ -137,7 +160,7 @@ function test_input($data) {
   <br><br>
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
-  <input type="submit" name="submit" value="Submit">  
+  <input type="submit" name="btn-save" value="Submit">  
 </form>
 
 <?php
