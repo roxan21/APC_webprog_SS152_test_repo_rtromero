@@ -56,9 +56,7 @@ if(isset($_GET['delete_id']))
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
-<link rel="stylesheet" href="style.css" type="text/css" />
+
 <script type="text/javascript">
 function edt_id(id)
 {
@@ -79,26 +77,22 @@ function delete_id(id)
 <body>
 <center>
 
-<div id="header">
- <div id="content">
-    <label>CRUD Operations With PHP and MySql - <a href="http://cleartuts.blogspot.com" target="_blank">By Cleartuts</a></label>
-    </div>
-</div>
+
 
 <div id="body">
  <div id="content">
-    <table align="center">
+	<table style="width:70%; margin-top:5em;margin-bottom:3em" align="center";>
     <tr>
-    <th colspan="5"><a href="Exercise5.php">add data here.</a></th>
+    <th colspan="10"><a href="Exercise5.php">Add Data Here.</a></th>
     </tr>
-    <th>First Name</th>
-    <th>Last Name</th>
+    <th>Name</th>
     <th>Nickname</th>
+    <th>Email</th>
 	<th>Address</th>
-	<th>gender</th>
+	<th>Gender</th>
 	<th>CP number</th>
 	<th>Comments</th>
-    <th colspan="2">Operations</th>
+    <th colspan="5">Operations</th>
     </tr>
     <?php
  $sql_query="SELECT * FROM users";
