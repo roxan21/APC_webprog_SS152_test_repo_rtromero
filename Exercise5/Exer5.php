@@ -83,11 +83,11 @@ function delete_id(id)
  <div id="content">
 	<table style="width:70%; margin-top:5em;margin-bottom:3em" align="center";>
     <tr>
-    <th colspan="10"><a href="Exercise5.php">Add Data Here.</a></th>
+    <th colspan="10"><a href="add_data.php">Add Data Here.</a></th>
     </tr>
     <th>Name</th>
+	<th>Email</th>
     <th>Nickname</th>
-    <th>Email</th>
 	<th>Address</th>
 	<th>Gender</th>
 	<th>CP number</th>

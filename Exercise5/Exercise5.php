@@ -25,7 +25,7 @@ if(isset($_POST['btn-save']))
   </script>
   <?php
  }
- else
+ else if
  {
   ?>
   <script type="text/javascript">
