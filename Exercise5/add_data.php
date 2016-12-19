@@ -4,8 +4,8 @@ include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
 {
  // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
+ $name = $_POST['name'];
+ $email = $_POST['email'];
  $nickname = $_POST['nickname'];
  $user_city = $_POST['user_city'];
  $gender = $_POST['gender'];
@@ -15,7 +15,7 @@ if(isset($_POST['btn-save']))
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(first_name,last_name,nickname,user_city,gender,cp_num,comments) VALUES('$first_name','$last_name','$nickname','$user_city','$gender','$cp_num','$comments')";
+        $sql_query = "INSERT INTO users(name,email,nickname,user_city,gender,cp_num,comments) VALUES('$name','$email','$nickname','$user_city','$gender','$cp_num','$comments')";
  $con=mysqli_query($con,$sql_query);
         
         // sql query for inserting data into database
@@ -23,37 +23,56 @@ if(isset($_POST['btn-save']))
 }
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
-<link rel="stylesheet" href="style.css" type="text/css" />
-</head>
 <body>
+<style>
+	body{
+		font-family: Comic Sans MS;
+		background-image: url("minimal.jpg");
+    background-repeat: no-repeat;
+   	background-attachment: fixed;
+    background-position: center;
+	}
+	
+	a:link {
+		color: black;
+		width: 100%;
+		text-decoration: none;
+	}
+	div {
+		text-align:center;
+	}
+	a:visited {
+    color: black;
+  }
+	a:hover {
+		color: brown;
+	}
+</style>
 <center>
 
 <div id="header">
- <div id="content">
-    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
-    </div>
+<div style = "margin-top:5em;text-align: center;">
+  <h1><b>Fill up this fields.</b><br></h1>
+</div>
 </div>
 <div id="body">
  <div id="content">
     <form method="post">
     <table align="center">
     <tr>
-    <td align="center"><a href="Exer5.php">back to main page</a></td>
+    <td align="center"><a href="Exer5.php">"back to main page"<-</a></td>
     </tr>
     <tr>
-    <td><input type="text" name="first_name" placeholder="First Name" required /></td>
+    <td><input type="text" name="name" placeholder="Name" required /></td>
     </tr>
-    <tr>
-    <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
+	<tr>
+    <td><input type="text" name="email" placeholder="Email" required /></td>
     </tr>
     <tr>
     <td><input type="text" name="nickname" placeholder="Nickname" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="user_city" placeholder="Address" required /></td>
+    <td><input type="text" name="user_city" placeholder="Address" /></td>
     </tr>
 	<tr>
     <td><input type="text" name="gender" placeholder="Gender" required /></td>
@@ -62,7 +81,7 @@ if(isset($_POST['btn-save']))
     <td><input type="text" name="cp_num" placeholder="CP number" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="comments" placeholder="comments" required /></td>
+    <td><input type="text" name="comments" placeholder="comments" /></td>
     </tr>
     <tr>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
